@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Employee Management App</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Employee Management</h1>
+    <p class="subtitle">Register employees and manage records in one place.</p>
+
+    <form id="employeeForm" novalidate>
+      <div class="grid">
+        <div class="field">
+          <label for="employeeName">Employee Name</label>
+          <input id="employeeName" name="employeeName" type="text" placeholder="Enter full name" required />
+        </div>
+
+        <div class="field">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" placeholder="example@company.com" required />
+        </div>
+
+        <div class="field">
+          <label for="mobileNumber">Mobile Number</label>
+          <input id="mobileNumber" name="mobileNumber" type="text" inputmode="numeric" pattern="[0-9]{10}" maxlength="10" placeholder="10-digit number" required />
+        </div>
+
+        <div class="field">
+          <label for="department">Department</label>
+          <input id="department" name="department" type="text" placeholder="e.g. HR, Engineering" required />
+        </div>
+
+        <div class="field">
+          <label for="salary">Salary</label>
+          <input id="salary" name="salary" type="number" min="1" placeholder="Enter salary" required />
+        </div>
+      </div>
+
+      <p id="formError" class="error"></p>
+      <button id="submitBtn" type="submit">Add Employee</button>
+      <button id="cancelEditBtn" type="button" class="secondary hidden">Cancel Edit</button>
+    </form>
+
+    <h2>Employee Records</h2>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Mobile</th>
+            <th>Department</th>
+            <th>Salary</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody id="employeeTableBody"></tbody>
+      </table>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
