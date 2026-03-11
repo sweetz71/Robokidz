@@ -1,0 +1,21 @@
+{
+  "name": "employee-management-mini-app",
+  "version": "1.0.0",
+  "description": "Employee Management Mini Application",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "keywords": [
+    "employee",
+    "express",
+    "crud"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.19.2"
+  }
+}
